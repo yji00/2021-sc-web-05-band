@@ -1,11 +1,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
 
 /* font-family: 'Lato', sans-serif; */
-
+/* font-family: 'Castoro', serif; */
 
 /************** default ***************/
-html, body {font: 16px 'Lato', sans-serif; letter-spacing: -.5px;color: #121212;}
+html, body {font: 16px 'Castoro', serif; letter-spacing: -.5px;color: #121212;}
 .wrapper {max-width: 800px; padding: 5em 1em; margin: auto;}
 .wrapper > .title{text-align: center;}
 .wrapper > h2.title{font-size: 1.625em; letter-spacing: 5px; margin-bottom: 1em;}
@@ -13,7 +14,7 @@ html, body {font: 16px 'Lato', sans-serif; letter-spacing: -.5px;color: #121212;
 a.anchor {height: 0; line-height: 0; display: inline;}
 
 /************** header-wrapper ***************/
-.header-wrapper {position: fixed; z-index: 9;width:100%; background-color: #121212; color: #f9f9f9;}
+.header-wrapper {position: fixed; z-index: 9;width:100%; background-color: #a9abd4; color: #f9f9f9;}
 .header-wrapper > .navi-wrapper {float: left;}
 .header-wrapper > .navi-wrapper >.navi {float: left; position: relative;}
 .header-wrapper > .navi-wrapper >.navi >a { padding: 1em 1.25em;} /* a태그를 인라인블럭으로 바꾼뒤 패딩을 줘서 전체 클릭이 가능하게  */
@@ -25,7 +26,7 @@ a.anchor {height: 0; line-height: 0; display: inline;}
 .header-wrapper > .navi-wrapper >.navi > .sub-wrap > .sub:hover {background-color: #ddd; }
 .header-wrapper > .navi-wrapper >.navi > .sub-wrap > .sub > a {width:160px; padding: 1em 1.25em;}
 .header-wrapper > .search-wrapper {float: right;}
-.header-wrapper > .search-wrapper:hover {background-color: #f32;}
+.header-wrapper > .search-wrapper:hover {background-color: #ddd; color: #121212;}
 .header-wrapper > .search-wrapper >a {padding: 1em 1.25em;}
 .header-wrapper > .bars-wrapper {float: right;display: none;}
 .header-wrapper > .bars-wrapper:hover {background-color: #ddd; color: #121212;}
@@ -36,6 +37,9 @@ a.anchor {height: 0; line-height: 0; display: inline;}
 
 /************** main-wrapper ***************/
 .main-wrapper {position: relative; padding-top: 48px;}
+.main-wrapper .swiper-slide{width: 100%; height: 100vh;}
+.main-wrapper .swiper-slide img{width: 100%; height: 100vh;}
+.main-wrapper .swiper-slide iframe{width: 100%; height: 100vh;}
 .main-wrapper > .bt-swiper {color: #f9f9f9; font-weight: lighter; font-size: 5em; position: absolute; top: 50%; 
     transform: translateY(-50%); z-index: 5; cursor: pointer; user-select: none; outline: none; transition: all .5s; opacity: .2;}
     .main-wrapper > .bt-swiper:hover{opacity: 1;}
@@ -50,29 +54,30 @@ a.anchor {height: 0; line-height: 0; display: inline;}
 .band-wrapper > .wrapper > .comment {line-height: 1.5; text-align: justify;}
 .band-wrapper > .wrapper > .member-wrap > .member{width: 33.333%; float: left; padding: 6%; text-align: center;}
 .band-wrapper > .wrapper > .member-wrap > .member > .name{margin-bottom: 1.25em;}
+.band-wrapper > .wrapper > .member-wrap > .member > .name:nth-child(1){background-color: #a9abd4;}
 .band-wrapper > .wrapper > .member-wrap > .member > .img{border-radius: 4px;}
 
 
 /************** tour-wrapper ***************/
-.tour-wrapper {background-color: #121212;}
-.tour-wrapper > .wrapper > h2.title {color: #f9f9f9;}
+.tour-wrapper {background-color: #eff1ee;}
+.tour-wrapper > .wrapper > h2.title {color: #111;}
 .tour-wrapper > .wrapper > .ticket-wrap {background-color: #f9f9f9; color: #555; margin-bottom: 2em;}
 .tour-wrapper > .wrapper > .ticket-wrap > .ticket {padding: 0.5em;}
 .tour-wrapper > .wrapper > .ticket-wrap > .ticket:not(:last-child) {border-bottom: 1px solid #ccc;}
 .tour-wrapper > .wrapper > .ticket-wrap > .ticket > span {float: left; padding: 0.325em;}
-.tour-wrapper > .wrapper > .ticket-wrap > .ticket > span.soldout {background-color: #f32; color: #f9f9f9; margin-left: 1em;}
+.tour-wrapper > .wrapper > .ticket-wrap > .ticket > span.soldout { background-color: #f32; color: #f9f9f9; margin-left: 1em;}
 .tour-wrapper > .wrapper > .ticket-wrap > .ticket > span.cnt {float: right; background-color: #121212; color: #f9f9f9; border-radius: 50%; margin-right: 2em; padding: 0.325em 0.625em;}
 .tour-wrapper > .wrapper > .city-wrap {width: 102%;}
 .tour-wrapper > .wrapper > .city-wrap > .city {width: 31.3333%; margin-right: 2%; float: left;}
 .tour-wrapper > .wrapper > .city-wrap > .city > .img-wrap {}
-.tour-wrapper > .wrapper > .city-wrap > .city > .img-wrap > img {transition: all 0.5s;}
+.tour-wrapper > .wrapper > .city-wrap > .city > .img-wrap > img {transition: all 0.5s; height: 50vh;}
 .tour-wrapper > .wrapper > .city-wrap > .city > .img-wrap:hover > img {opacity: .7;}
 .tour-wrapper > .wrapper > .city-wrap > .city > .cont-wrap {background-color: #f9f9f9; padding: 1em;}
 .tour-wrapper > .wrapper > .city-wrap > .city > .cont-wrap > .name {font-weight: bold; color: #000; margin-bottom: 1em;}
 .tour-wrapper > .wrapper > .city-wrap > .city > .cont-wrap > .date {color: #777; margin-bottom: 1em;}
 .tour-wrapper > .wrapper > .city-wrap > .city > .cont-wrap > .comment {line-height: 1.25; margin-bottom: 1em;}
-.tour-wrapper > .wrapper > .city-wrap > .city > .cont-wrap > .bt-buy {padding: 0.625em 0.875em; transition: all 0.35s; background-color: #121212; color: #f9f9f9;}
-.tour-wrapper > .wrapper > .city-wrap > .city > .cont-wrap > .bt-buy:hover {background-color: #ccc; color: #121212;}
+.tour-wrapper > .wrapper > .city-wrap > .city > .cont-wrap > .bt-buy {padding: 0.625em 0.875em; transition: all 0.35s; background-color: #ccc; color: #121212;}
+.tour-wrapper > .wrapper > .city-wrap > .city > .cont-wrap > .bt-buy:hover {background-color: #eff1ee; color: #a9abd4;}
 
 
 /************** contact-wrapper ***************/
@@ -85,8 +90,10 @@ a.anchor {height: 0; line-height: 0; display: inline;}
 .contact-wrapper > .wrapper > .contact-wrap > .contact-form > :nth-child(1) {width: 48%; float: left;}
 .contact-wrapper > .wrapper > .contact-wrap > .contact-form > :nth-child(2) {width: 48%; float: right;}
 .contact-wrapper > .wrapper > .contact-wrap > .contact-form > :nth-child(3) {width: 100%;}
-.contact-wrapper > .wrapper > .contact-wrap > .contact-form > :nth-child(4) {padding: 0.75em 1em; background-color: #121212; color: #f9f9f9; float: right;}
-.contact-wrapper > .wrapper > .contact-wrap > .contact-form > :nth-child(4):hover {background-color: #ccc; color: #121212;}
+.contact-wrapper > .wrapper > .contact-wrap > .contact-form > :nth-child(4) {padding: 0.75em 1em; background-color: #ccc; color: #121212; float: right;}
+.contact-wrapper > .wrapper > .contact-wrap > .contact-form > :nth-child(4):hover {background-color: #eff1ee; color: #a9abd4;}
+
+
 
 .contact-wrapper > .map-wrap{width: 100%; height: 60vh;}
 
@@ -102,18 +109,18 @@ a.anchor {height: 0; line-height: 0; display: inline;}
 /************** modal-wrapper ***************/
 .modal-wrapper {background-color: rgba(0, 0, 0, .3); width: 100%; height: 100vh; position: fixed; top: 0; left: 0; z-index: 10; display: none;}
 .modal-wrapper > .modal-wrap {width: 800px; margin: 15vh auto; background-color: #f9f9f9; box-shadow: 0 0 10px rgba(0, 0, 0, .5); transition: all 0.5s; transform: translateY(-100vh);}
-.modal-wrapper > .modal-wrap > .modal-header {background-color: #009688; position: relative;}
+.modal-wrapper > .modal-wrap > .modal-header {background-color: #a9abd4; position: relative;}
 .modal-wrapper > .modal-wrap > .modal-header > h2.title {color: #f9f9f9; font-size: 2em; text-align: center; padding: 1.25em 0; letter-spacing: 4px; line-height: 1;}
 .modal-wrapper > .modal-wrap > .modal-header > h2.title > .fa {margin-right: 0.5em;}
 .modal-wrapper > .modal-wrap > .modal-header > .bt-close {position: absolute; top: 0; right: 0; padding: 0.75em 1em; font-size: 1.125em; color: #f9f9f9; cursor: pointer;}
-.modal-wrapper > .modal-wrap > .modal-header > .bt-close:hover {background-color: #013b36;}
+.modal-wrapper > .modal-wrap > .modal-header > .bt-close:hover {background-color: #eff1ee;}
 .modal-wrapper > .modal-wrap > .modal-body {padding: 1em;}
 .modal-wrapper > .modal-wrap > .modal-body > form {}
 .modal-wrapper > .modal-wrap > .modal-body > form > * {width: 100%;}
 .modal-wrapper > .modal-wrap > .modal-body > form > label {margin-bottom: 0.75em;}
 .modal-wrapper > .modal-wrap > .modal-body > form > input {margin-bottom: 1.25em; padding: 0.75em; border: 1px solid #ccc;}
-.modal-wrapper > .modal-wrap > .modal-body > form > button {padding: 1em; background-color: #009688; color: #f9f9f9;}
-.modal-wrapper > .modal-wrap > .modal-body > form > button:hover {background-color: #013b36;}
+.modal-wrapper > .modal-wrap > .modal-body > form > button {padding: 1em; background-color: #ccc; color: #121212;}
+.modal-wrapper > .modal-wrap > .modal-body > form > button:hover {background-color: #eff1ee; color: #a9abd4;}
 .modal-wrapper > .modal-wrap > .modal-footer {padding: 1em;}
 .modal-wrapper > .modal-wrap > .modal-footer > .bt-close {float: left; color: #f9f9f9; background-color: #f44336; padding: 0.75em 1em;}
 .modal-wrapper > .modal-wrap > .modal-footer > .bt-close:hover {background-color: #99251c;}
@@ -144,6 +151,7 @@ a.anchor {height: 0; line-height: 0; display: inline;}
 	.header-wrapper > .monavi-wrapper.active {display: block;}
 
 	.modal-wrapper > .modal-wrap {width: 500px;}
+	
 }
 
 @media (max-width: 576px) {
